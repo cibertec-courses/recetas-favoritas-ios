@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDp7BWUouXpk0LHElk78PZUv3dgGABzKNQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>253032000284</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.pe.cibertec.recetas-favoritas-ios</string>
+	<key>PROJECT_ID</key>
+	<string>recetasfavoritas-485b6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>recetasfavoritas-485b6.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:253032000284:ios:d1b52b8aa11ba63e6668d9</string>
+</dict>
+</plist>
