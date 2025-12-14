@@ -15,6 +15,10 @@
 		B714FF9C2EEF0E5900EFC25C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B714FF9B2EEF0E5900EFC25C /* FirebaseFirestore */; };
 		B714FFA02EEF136D00EFC25C /* RecetaFavorita.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FF9F2EEF136D00EFC25C /* RecetaFavorita.swift */; };
 		B714FFA22EEF14D100EFC25C /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FFA12EEF14D100EFC25C /* FirebaseService.swift */; };
+		B714FFA42EEF21AD00EFC25C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FFA32EEF21AD00EFC25C /* Meal.swift */; };
+		B714FFA62EEF227E00EFC25C /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FFA52EEF227E00EFC25C /* MealService.swift */; };
+		B714FFA82EEF248C00EFC25C /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FFA72EEF248C00EFC25C /* ViewState.swift */; };
+		B714FFAA2EEF24E000EFC25C /* ExplorarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FFA92EEF24E000EFC25C /* ExplorarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		B714FF982EEF0C7300EFC25C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B714FF9F2EEF136D00EFC25C /* RecetaFavorita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetaFavorita.swift; sourceTree = "<group>"; };
 		B714FFA12EEF14D100EFC25C /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		B714FFA32EEF21AD00EFC25C /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		B714FFA52EEF227E00EFC25C /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
+		B714FFA72EEF248C00EFC25C /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		B714FFA92EEF24E000EFC25C /* ExplorarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 				B714FF8C2EEF0B3800EFC25C /* ContentView.swift */,
 				B714FF8E2EEF0B3A00EFC25C /* Assets.xcassets */,
 				B714FF902EEF0B3A00EFC25C /* Preview Content */,
+				B714FFA92EEF24E000EFC25C /* ExplorarView.swift */,
 			);
 			path = "recetas-favoritas-ios";
 			sourceTree = "<group>";
@@ -82,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				B714FF9F2EEF136D00EFC25C /* RecetaFavorita.swift */,
+				B714FFA32EEF21AD00EFC25C /* Meal.swift */,
+				B714FFA72EEF248C00EFC25C /* ViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B714FFA12EEF14D100EFC25C /* FirebaseService.swift */,
+				B714FFA52EEF227E00EFC25C /* MealService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -171,8 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B714FFA42EEF21AD00EFC25C /* Meal.swift in Sources */,
+				B714FFA82EEF248C00EFC25C /* ViewState.swift in Sources */,
 				B714FF8D2EEF0B3800EFC25C /* ContentView.swift in Sources */,
+				B714FFA62EEF227E00EFC25C /* MealService.swift in Sources */,
 				B714FF8B2EEF0B3800EFC25C /* recetas_favoritas_iosApp.swift in Sources */,
+				B714FFAA2EEF24E000EFC25C /* ExplorarView.swift in Sources */,
 				B714FFA22EEF14D100EFC25C /* FirebaseService.swift in Sources */,
 				B714FFA02EEF136D00EFC25C /* RecetaFavorita.swift in Sources */,
 			);
