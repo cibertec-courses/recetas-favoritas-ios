@@ -17,6 +17,8 @@ struct ExplorarView: View {
     
     @State private var agregados: Set<String> = []
     
+    @State private var recetaSeleccionada: Meal?
+    
     var body: some View {
         NavigationStack{
             Group{
@@ -46,6 +48,8 @@ struct ExplorarView: View {
                 cargarRecetas()
                 cargarFavoritosExistentes()
             }
+        }.sheet(item: $recetaSeleccionada){ receta in
+            DetalleRecetaview(receta: receta)
         }
     }
     
@@ -61,10 +65,16 @@ struct ExplorarView: View {
                 }
                 .frame(width: 60, height: 60)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
+                
                 // Nombre de la receta
-                Text(receta.strMeal)
-                    .font(.headline)
-                //Acciones
+                Button{
+                    recetaSeleccionada = receta
+                } label: {
+                    Text(receta.strMeal)
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                }
+              
                 Spacer()
                 
                 Button {

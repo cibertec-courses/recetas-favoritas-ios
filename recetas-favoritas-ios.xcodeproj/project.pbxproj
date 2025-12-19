@@ -20,6 +20,7 @@
 		B714FFA82EEF248C00EFC25C /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FFA72EEF248C00EFC25C /* ViewState.swift */; };
 		B714FFAA2EEF24E000EFC25C /* ExplorarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FFA92EEF24E000EFC25C /* ExplorarView.swift */; };
 		B7720D452EF4F632004388AD /* FavoritosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7720D442EF4F632004388AD /* FavoritosView.swift */; };
+		B79D8B282EF4FB7A00689B26 /* DetalleRecetaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D8B272EF4FB7A00689B26 /* DetalleRecetaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B714FFA72EEF248C00EFC25C /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		B714FFA92EEF24E000EFC25C /* ExplorarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarView.swift; sourceTree = "<group>"; };
 		B7720D442EF4F632004388AD /* FavoritosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosView.swift; sourceTree = "<group>"; };
+		B79D8B272EF4FB7A00689B26 /* DetalleRecetaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleRecetaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				B714FF902EEF0B3A00EFC25C /* Preview Content */,
 				B714FFA92EEF24E000EFC25C /* ExplorarView.swift */,
 				B7720D442EF4F632004388AD /* FavoritosView.swift */,
+				B79D8B272EF4FB7A00689B26 /* DetalleRecetaView.swift */,
 			);
 			path = "recetas-favoritas-ios";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				B714FFA42EEF21AD00EFC25C /* Meal.swift in Sources */,
 				B714FFA82EEF248C00EFC25C /* ViewState.swift in Sources */,
+				B79D8B282EF4FB7A00689B26 /* DetalleRecetaView.swift in Sources */,
 				B714FF8D2EEF0B3800EFC25C /* ContentView.swift in Sources */,
 				B714FFA62EEF227E00EFC25C /* MealService.swift in Sources */,
 				B714FF8B2EEF0B3800EFC25C /* recetas_favoritas_iosApp.swift in Sources */,
