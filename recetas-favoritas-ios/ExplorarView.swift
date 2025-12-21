@@ -112,17 +112,32 @@ struct ExplorarView: View {
             return
         }
         
+        agregados.insert(receta.id)
         
         Task{
             do{
+                var categoria = ""
+                var pais = ""
+                var instrucciones = ""
+                
+                if let detalle = try await MealService.shared.obtenerRecetarPorId(id: receta.id){
+                    categoria = detalle.strCategory ?? ""
+                    pais = detalle.strArea ?? ""
+                    instrucciones = detalle.strInstructions ?? ""
+                }
+                
                 let favorita =  RecetaFavorita(
-                    
                     idMeal: receta.idMeal,
                     nombre: receta.strMeal,
-                    imagen: receta.strMealThumb
+                    imagen: receta.strMealThumb,
+                    categoria: categoria,
+                    pais: pais,
+                    instrucciones: instrucciones
+                    
                 )
                 try await FirebaseService.shared.agregarFavorito(receta: favorita)
             }catch{
+                agregados.remove(receta.idMeal)
                 print("Error al guardar: \(error)")
             }
         }

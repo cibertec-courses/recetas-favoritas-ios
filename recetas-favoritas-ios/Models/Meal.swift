@@ -15,7 +15,10 @@ struct MealResponse: Codable {
 struct Meal: Codable, Identifiable{
     var id: String { idMeal }
     
-    let idMeal: String
-    let strMeal: String
-    let strMealThumb: String
+    var idMeal: String
+    var strMeal: String
+    var strMealThumb: String
+    var strCategory: String?
+    var strArea: String?
+    var strInstructions: String?
 }

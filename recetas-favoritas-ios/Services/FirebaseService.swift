@@ -23,6 +23,9 @@ class FirebaseService{
             "idMeal": receta.idMeal,
             "nombre": receta.nombre,
             "imagen": receta.imagen,
+            "categoria": receta.categoria,
+            "pais": receta.pais,
+            "instrucciones": receta.instrucciones,
             "fechaAgregada": Timestamp(date: receta.fechaAgregada)
         ] as [String: Any]
         
@@ -46,6 +49,9 @@ class FirebaseService{
                     idMeal: idMeal,
                     nombre: nombre,
                     imagen: imagen,
+                    categoria: data["categroia"] as? String ?? "",
+                    pais: data["pais"] as? String ?? "",
+                    instrucciones: data["instrucciones"] as? String ?? "",
                     fechaAgregada: timestanp.dateValue()
                 )
                 favoritos.append(receta)

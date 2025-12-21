@@ -15,6 +15,20 @@ class MealService{
     
     private init(){}
     
+    func obtenerRecetarPorId(id: String) async throws -> Meal?{
+        let  urlString = "\(baseURL)/lookup.php?i=\(id)"
+        
+        guard let url = URL (string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let response = try JSONDecoder().decode(MealResponse.self, from: data)
+        
+        return response.meals?.first
+        
+        
+    }
     
     func buscarRecetas (nombre: String) async  throws -> [Meal]{
         let urlString = "\(baseURL)/search.php?s=\(nombre)"
