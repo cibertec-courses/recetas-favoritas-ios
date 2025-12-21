@@ -21,6 +21,10 @@
 		B714FFAA2EEF24E000EFC25C /* ExplorarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714FFA92EEF24E000EFC25C /* ExplorarView.swift */; };
 		B7720D452EF4F632004388AD /* FavoritosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7720D442EF4F632004388AD /* FavoritosView.swift */; };
 		B79D8B282EF4FB7A00689B26 /* DetalleRecetaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D8B272EF4FB7A00689B26 /* DetalleRecetaView.swift */; };
+		B7B99BA02EF862D0003537F0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B99B9F2EF862D0003537F0 /* AuthService.swift */; };
+		B7B99BA62EF86363003537F0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B7B99BA52EF86363003537F0 /* FirebaseAuth */; };
+		B7B99BA82EF864F7003537F0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B99BA72EF864F7003537F0 /* LoginView.swift */; };
+		B7B99BAA2EF86A02003537F0 /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B99BA92EF86A02003537F0 /* PerfilView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		B714FFA92EEF24E000EFC25C /* ExplorarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarView.swift; sourceTree = "<group>"; };
 		B7720D442EF4F632004388AD /* FavoritosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosView.swift; sourceTree = "<group>"; };
 		B79D8B272EF4FB7A00689B26 /* DetalleRecetaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleRecetaView.swift; sourceTree = "<group>"; };
+		B7B99B9F2EF862D0003537F0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B7B99BA12EF8634D003537F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B7B99BA72EF864F7003537F0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B7B99BA92EF86A02003537F0 /* PerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B714FF9C2EEF0E5900EFC25C /* FirebaseFirestore in Frameworks */,
+				B7B99BA62EF86363003537F0 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +66,7 @@
 			children = (
 				B714FF892EEF0B3800EFC25C /* recetas-favoritas-ios */,
 				B714FF882EEF0B3800EFC25C /* Products */,
+				B7B99BA22EF8635A003537F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +81,7 @@
 		B714FF892EEF0B3800EFC25C /* recetas-favoritas-ios */ = {
 			isa = PBXGroup;
 			children = (
+				B7B99BA12EF8634D003537F0 /* Info.plist */,
 				B714FF9E2EEF130500EFC25C /* Services */,
 				B714FF9D2EEF12F500EFC25C /* Models */,
 				B714FF8A2EEF0B3800EFC25C /* recetas_favoritas_iosApp.swift */,
@@ -81,6 +92,8 @@
 				B714FFA92EEF24E000EFC25C /* ExplorarView.swift */,
 				B7720D442EF4F632004388AD /* FavoritosView.swift */,
 				B79D8B272EF4FB7A00689B26 /* DetalleRecetaView.swift */,
+				B7B99BA72EF864F7003537F0 /* LoginView.swift */,
+				B7B99BA92EF86A02003537F0 /* PerfilView.swift */,
 			);
 			path = "recetas-favoritas-ios";
 			sourceTree = "<group>";
@@ -108,8 +121,16 @@
 			children = (
 				B714FFA12EEF14D100EFC25C /* FirebaseService.swift */,
 				B714FFA52EEF227E00EFC25C /* MealService.swift */,
+				B7B99B9F2EF862D0003537F0 /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B7B99BA22EF8635A003537F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +151,7 @@
 			name = "recetas-favoritas-ios";
 			packageProductDependencies = (
 				B714FF9B2EEF0E5900EFC25C /* FirebaseFirestore */,
+				B7B99BA52EF86363003537F0 /* FirebaseAuth */,
 			);
 			productName = "recetas-favoritas-ios";
 			productReference = B714FF872EEF0B3800EFC25C /* recetas-favoritas-ios.app */;
@@ -192,8 +214,11 @@
 				B714FFA42EEF21AD00EFC25C /* Meal.swift in Sources */,
 				B714FFA82EEF248C00EFC25C /* ViewState.swift in Sources */,
 				B79D8B282EF4FB7A00689B26 /* DetalleRecetaView.swift in Sources */,
+				B7B99BAA2EF86A02003537F0 /* PerfilView.swift in Sources */,
 				B714FF8D2EEF0B3800EFC25C /* ContentView.swift in Sources */,
 				B714FFA62EEF227E00EFC25C /* MealService.swift in Sources */,
+				B7B99BA02EF862D0003537F0 /* AuthService.swift in Sources */,
+				B7B99BA82EF864F7003537F0 /* LoginView.swift in Sources */,
 				B714FF8B2EEF0B3800EFC25C /* recetas_favoritas_iosApp.swift in Sources */,
 				B714FFAA2EEF24E000EFC25C /* ExplorarView.swift in Sources */,
 				B7720D452EF4F632004388AD /* FavoritosView.swift in Sources */,
@@ -329,6 +354,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"recetas-favoritas-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "recetas-favoritas-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,6 +383,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"recetas-favoritas-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "recetas-favoritas-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -414,6 +441,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B714FF9A2EEF0E5900EFC25C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		B7B99BA52EF86363003537F0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B714FF9A2EEF0E5900EFC25C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

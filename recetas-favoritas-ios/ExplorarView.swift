@@ -48,7 +48,7 @@ struct ExplorarView: View {
                 cargarRecetas()
                 cargarFavoritosExistentes()
             }
-        }.sheet(item: $recetaSeleccionada){ receta in
+        }.fullScreenCover(item: $recetaSeleccionada){ receta in
             DetalleRecetaview(receta: receta)
         }
     }

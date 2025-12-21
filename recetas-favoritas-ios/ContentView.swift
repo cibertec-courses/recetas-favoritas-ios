@@ -11,22 +11,35 @@ struct ContentView: View {
     
     @State private var favoritos: [RecetaFavorita] = []
     
+    @State private var estaLogueado = AuthService.shared.estaLogueado
+    
     @State private var mensaje = ""
     
     var body: some View {
-        TabView{
-            ExplorarView()
-                .tabItem{
-                    Image(systemName: "magnifyingglass")
-                    Text("Explorar")
-                }
+        if estaLogueado{
             
-            FavoritosView()
-                .tabItem{
-                    Image(systemName: "heart.fill")
-                    Text("Favoritos")
-                }
-            
+            TabView{
+                ExplorarView()
+                    .tabItem{
+                        Image(systemName: "magnifyingglass")
+                        Text("Explorar")
+                    }
+                
+                FavoritosView()
+                    .tabItem{
+                        Image(systemName: "heart.fill")
+                        Text("Favoritos")
+                    }
+                
+                PerfilView (estaLogueado: $estaLogueado)
+                    .tabItem{
+                        Image(systemName:"person.fill")
+                        Text("Perfil")
+                    }
+                
+            }
+        }else{
+            LoginView(estaLogueado: $estaLogueado)
         }
     }
   

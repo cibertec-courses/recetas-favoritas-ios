@@ -14,18 +14,30 @@ struct DetalleRecetaview: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View{
-        NavigationStack{
             ScrollView{
-                VStack(spacing: 16){
-                    AsyncImage(url: URL(string: receta.strMealThumb)){ image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    } placeholder: {
-                        ProgressView()
+                VStack(alignment: .leading, spacing: 16){
+                    ZStack(alignment: .topTrailing){
+                        
+                        AsyncImage(url: URL(string: receta.strMealThumb)){ image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(height: 250)
+                        .clipped()
+                        
+                        Button{
+                            dismiss()
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .shadow(radius: 3)
+                        }
+                        .padding()
                     }
-                    .frame(height: 250)
-                    .clipped()
                     
                     Text(receta.strMeal)
                         .font(.title)
@@ -36,7 +48,8 @@ struct DetalleRecetaview: View {
                 
                         if let categoria = receta.strCategory {
                             HStack{
-                                Label (categoria, systemImage: "tag")
+                                Image(systemName: "tag")
+                                Text (categoria)
                             }
                             .font(.caption)
                             .padding(.horizontal, 12)
@@ -51,7 +64,8 @@ struct DetalleRecetaview: View {
                         
                         if let pais = receta.strArea{
                             HStack{
-                                Label(pais, systemImage: "globe")
+                                Image( systemName: "globe")
+                                Text(pais)
                             }
                             .font(.caption)
                             .padding(.horizontal, 12)
@@ -68,7 +82,7 @@ struct DetalleRecetaview: View {
                     if let instrucciones = receta.strInstructions {
                         VStack{
                             Text("Instrucciones")
-                                .font(.title)
+                                .font(.headline)
                                 .fontWeight(.bold)
                                 
                                
@@ -83,22 +97,14 @@ struct DetalleRecetaview: View {
                         .background(Color.gray.opacity(0.1))
                         .cornerRadius(12)
                         .padding(.horizontal)
-                        Spacer(minLength: 10)
+                        
+                        Spacer(minLength: 20)
                         
                     }
                     
                 }
             }
         }
-        .navigationTitle("Detalle")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar{
-            ToolbarItem(placement: .navigation){
-                Button("Cerrar"){
-                    dismiss()
-                }
-            }
-        }
-    }
+    
     
 }
